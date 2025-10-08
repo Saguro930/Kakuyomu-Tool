@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3, 
+  "name": "KakuyomuTool",
+  "version": "1.0",
+  "description": "カクヨムの小説ページのテーマなどを変更するための拡張機能です。",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://kakuyomu.jp/works/*/episodes/*" 
+      ],
+      "js": ["content_script.js"]
+      // "run_at": "document_idle"
+    }
+  ]
+}
