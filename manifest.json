@@ -1,16 +1,18 @@
 {
-  "manifest_version": 3, 
-  "name": "KakuyomuTool",
+  "manifest_version": 3,
+  "name": "カクヨム拡張機能のテスト",
   "version": "1.0",
-  "description": "カクヨムの小説ページのテーマなどを変更するための拡張機能です。",
+  "description": "カクヨムの小説ページにカスタムのビューワー設定を追加します。",
+  
+  "permissions": [
+    "storage" 
+  ],
 
   "content_scripts": [
     {
-      "matches": [
-        "https://kakuyomu.jp/works/*/episodes/*" 
-      ],
-      "js": ["content_script.js"]
-      // "run_at": "document_idle"
+      "matches": ["https://kakuyomu.jp/works/*/episodes/*"],
+      "js": ["content_script.js"],
+      "css": ["style.css"]
     }
   ]
 }
